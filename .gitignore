@@ -1,6 +1,11 @@
 transformer.py
+
 attention-and-transformers.synctex.gz
 attention-and-transformers.pdf
 attention-and-transformers.log
 attention-and-transformers.aux
 attention-and-transformers.tex
+
+venv
+
+data
