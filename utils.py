@@ -3,7 +3,6 @@ import torch.nn as nn
 
 class PatchEmbedding(nn.Module):
     def __init__(self, image_size, patch_size, in_channels, embed_dim, batch_size):
-      num_patches = int((image_size * image_size)/(patch_size * patch_size))
       super(PatchEmbedding, self).__init__()
       num_of_patches = (image_size * image_size)/(patch_size * patch_size)
 
