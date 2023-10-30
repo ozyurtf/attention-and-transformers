@@ -9,7 +9,7 @@ class PatchEmbedding(nn.Module):
                             out_channels = embed_dim,
                             kernel_size = (patch_size, patch_size),
                             stride = (patch_size, patch_size),
-                            padding = (patch_size, patch_size))
+                            padding = (patch_size*2, patch_size*2))
 
       self.relu = nn.ReLU()
       self.maxpool = nn.MaxPool2d(kernel_size=patch_size, stride=1)
@@ -116,7 +116,7 @@ class VisionTransformer(nn.Module):
 
 
       self.position_embedding = nn.Parameter(torch.randn(batch_size,
-                                                         50,
+                                                         290,
                                                          embed_dim))
 
       self.layers = nn.ModuleList([])

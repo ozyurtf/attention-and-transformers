@@ -7,13 +7,13 @@ from utils import VisionTransformer
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 
-image_size = 32
+image_size = 64
 patch_size = 4
 in_channels = 3
-embed_dim = 768
+embed_dim = 512
 num_heads = 8
 mlp_dim = 2048
-num_layers = 5
+num_layers = 6
 num_classes = 100
 dropout = 0.01
 batch_size = 100
