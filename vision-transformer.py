@@ -18,21 +18,6 @@ num_classes = 100
 dropout = 0.01
 batch_size = 100
 
-model = VisionTransformer(image_size = image_size,
-                          patch_size = patch_size,
-                          in_channels = in_channels,
-                          embed_dim = embed_dim,
-                          num_heads = num_heads,
-                          mlp_dim = mlp_dim,
-                          num_layers = num_layers,
-                          num_classes = num_classes,
-                          dropout = dropout,
-                          batch_size = 1).to(device)
-
-input_tensor = torch.randn(1, in_channels, image_size, image_size).to(device)
-output = model(input_tensor)
-print(output.shape)
-
 # Load the CIFAR-100 dataset
 transform_train = transforms.Compose([
     transforms.RandomCrop(32, padding=4),
