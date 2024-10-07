@@ -9,3 +9,5 @@ attention-and-transformers.tex
 venv
 
 data
+
+.DS_Store
